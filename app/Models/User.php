@@ -27,7 +27,7 @@ class User extends Authenticatable
     }
 
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar'
+        'name', 'phone', 'email', 'password', 'introduction', 'avatar',
     ];
 
     public function replies()
