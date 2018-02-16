@@ -43,6 +43,7 @@ $api->version('v1', [
                 ->name('api.topics.update');
             $api->delete('topics/{topic}', 'TopicsController@destroy')
                 ->name('api.topics.delete');
+
         });
 
         // 短信验证码
@@ -69,6 +70,10 @@ $api->version('v1', [
         //获得标签
         $api->get('categories', 'CategoriesController@index')
             ->name('api.categories.index');
+        $api->get('topics', 'TopicsController@index')
+            ->name('api.topics.index');
+        $api->get('users/{user}/topics', 'TopicsController@userIndex')
+            ->name('api.users.topics.index');
 
     });
 });
